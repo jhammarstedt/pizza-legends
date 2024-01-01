@@ -1,41 +1,38 @@
 class DirectionInput {
     constructor() {
-        this.heldDirections = [];
-
-
-        this.map = {
-            "ArrowUp": "up",
-            "ArrowDown": "down",
-            "ArrowLeft": "left",
-            "ArrowRight": "right",
-            "KeyW": "up",
-            "KeyS": "down",
-            "KeyA": "left",
-            "KeyD": "right",
-        }
+      this.heldDirections = [];
+  
+      this.map = {
+        "ArrowUp": "up",
+        "KeyW": "up",
+        "ArrowDown": "down",
+        "KeyS": "down",
+        "ArrowLeft": "left",
+        "KeyA": "left",
+        "ArrowRight": "right",
+        "KeyD": "right",
+      }
     }
-
+  
     get direction() {
-        // Return the first direction in the array
-        return this.heldDirections[0];
+      return this.heldDirections[0];
     }
-
-    init(){
-        document.addEventListener("keydown",e => {
-            const dir = this.map[e.code];
-            if (dir && this.heldDirections.indexOf(dir) === -1){
-                this.heldDirections.unshift(dir); // Add to front of array
-                console.log(this.heldDirections);
-            }
-        });
-        document.addEventListener("keyup",e => {
-            const dir = this.map[e.code];
-            const index = this.heldDirections.indexOf(dir);
-            if (index > -1){
-                this.heldDirections.splice(index,1);
-                console.log(this.heldDirections);
-            }
-        });
+  
+    init() {
+      document.addEventListener("keydown", e => {
+        const dir = this.map[e.code];
+        if (dir && this.heldDirections.indexOf(dir) === -1) {
+          this.heldDirections.unshift(dir);
+        }
+      });
+      document.addEventListener("keyup", e => {
+        const dir = this.map[e.code];
+        const index = this.heldDirections.indexOf(dir);
+        if (index > -1) {
+          this.heldDirections.splice(index, 1);
+        }
+      })
+  
     }
-    
-}
+  
+  }
