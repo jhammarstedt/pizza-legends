@@ -1,1 +1,1 @@
-Chill Xmas project to freshen up some JS knowledge. So far 100% of this code is written by following Drew Conley's [youtube series](https://www.youtube.com/watch?v=fyi4vfbKEeo&list=PLcjhmZ8oLT0r9dSiIK6RB_PuBWlG1KSq_) so all credit goes to him!
+Chill code-along project to freshen up my javascript. So far 100% of this code is written by following Drew Conley's [youtube series](https://www.youtube.com/watch?v=fyi4vfbKEeo&list=PLcjhmZ8oLT0r9dSiIK6RB_PuBWlG1KSq_) so all credit goes to him!
